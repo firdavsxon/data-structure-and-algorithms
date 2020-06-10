@@ -1,4 +1,4 @@
-from .linkedlist import Node, SingleLinkedList
+from LinkedList.linkedlist import SingleLinkedList
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
