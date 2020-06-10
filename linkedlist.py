@@ -16,7 +16,7 @@ class SingleLinkedList:
     def count_node(self):
         pass
 
-    def search(self):
+    def search(self, data):
         pass
 
     def insert_in_beginning(self, data):
@@ -31,7 +31,7 @@ class SingleLinkedList:
     def insert_after(self, data, x):
         pass
 
-    def insert_before(self):
+    def insert_before(self, data, x):
         pass
 
     def insert_at_position(self, data, k):
@@ -81,6 +81,9 @@ class SingleLinkedList:
 
     def _divide_list(self, p):
         pass
+
+
+
 
 
 
