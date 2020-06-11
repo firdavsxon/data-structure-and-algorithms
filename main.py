@@ -1,14 +1,15 @@
 from LinkedList.linkedlist import SingleLinkedList
 
+obj_list = SingleLinkedList()
+obj_list.create_list()
+
 
 def linked_list_practice():
 	while True:
-		obj_list = SingleLinkedList()
-		obj_list.create_list()
 		print("1. Display list")
 		print("2. Count the number of nodes")
 		print("3. Search for an element")
-		print("4. Insert in empty list/Insert in beginning of the list")
+		print("4. Insert in beginning of the list")
 		print("5. Insert a node at the end of the list")
 		print("6. Insert a node after a specified node")
 		print("7. Insert a node before a specified node")
