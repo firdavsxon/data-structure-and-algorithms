@@ -1,32 +1,74 @@
 class Node:
 
     def __init__(self, value):
-        self.info = value
-        self.link = None
+        self.data = value
+        self.next = None
 
 
 class SingleLinkedList:
 
     def __init__(self):
-        self.start = None
+        self.head = None
 
     def display_list(self):
-        pass
+        if self.head is None:
+            print("List is empty")
+            return
+        else:
+            print("List is: ")
+            a = self.head
+            while a is not None:
+                print(a.data, " ", end='')
+                a = a.next
+            print()
 
     def count_node(self):
-        pass
+        a = self.head
+        n=0
+        while a is not None:
+            n += 1
+            a = a.next
+        print("Number of nodes in the list = ", n)
+        return n
 
-    def search(self, data):
-        pass
+    def search(self, x):
+        position = 1
+        a = self.head
+        while a is not None:
+            if a.data == x:
+                print(x, " is at position ", position)
+                return True
+            position += 1
+            a = a.next
+        else:
+            print(x, "not found in list")
+            return False
 
     def insert_in_beginning(self, data):
-        pass
+        if not isinstance(data, Node):
+            data = Node(data)
+        data.next = self.head
+        self.head = data
 
     def insert_at_end(self, data):
-        pass
+        temp = Node(data)
+
+        if self.head is None:
+            self.head = temp
+            return
+
+        a= self.head
+        while a.next is not None:
+            a=a.next
+        a.next = temp
 
     def create_list(self):
-        pass
+        n = int(input("Enter the number of nodes: "))
+        if n == 0:
+            return
+        for i in range(n):
+            data = int(input("Enter the element to be inserted: "))
+            self.insert_at_end(data)
 
     def insert_after(self, data, x):
         pass
