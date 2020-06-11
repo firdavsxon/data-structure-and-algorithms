@@ -161,7 +161,6 @@ class SingleLinkedList:
         self.head = self.head.next
 
     def delete_last_node(self):
-
         if self.head is None:
             return
 
@@ -213,7 +212,6 @@ class SingleLinkedList:
                 a = a.next
             end = a
 
-
     def has_cycle(self):
         pass
 
@@ -227,19 +225,60 @@ class SingleLinkedList:
         pass
 
     def merge2(self, list2):
-        pass
+        merge_list = SingleLinkedList()
+        merge_list.head = self._merge2(self.head, list2.head)
+        return merge_list
 
     def _merge2(self, p1, p2):
-        pass
+        if p1.data <= p2.data:
+            startM = p1
+            p1 = p1.next
+        else:
+            startM = p2
+            p2 = p2.next
+        pM = startM
+
+        while p1 is not None and p2 is not None:
+            if p1.data <= p2.data:
+                pM.next = p1
+                pM = pM.next
+                p1 = p1.next
+            else:
+                pM.next = p2
+                pM = pM.next
+                p2 = p2.next
+
+        if p1 is None:
+            pM.next = p2
+        else:
+            pM.next = p2
+
+        return startM
 
     def merge_sort(self):
-        pass
+        self.head = self._merge_sort_rec(self.head)
 
     def _merge_sort_rec(self, listStart):
-        pass
+        # if list empty or has one element
+        if listStart is None or listStart.next is None:
+            return listStart
 
-    def _divide_list(self, p):
-        pass
+        # if more than one element
+        start1 = listStart
+        start2 = self._divide_list(listStart)
+        start1 = self._merge_sort_rec(start1)
+        start2 = self._merge_sort_rec(start2)
+        startM = self._merge2(start1, start2)
+        return startM
+
+    def _divide_list(self, a):
+        q = a.next.next
+        while q is not None and q.next is not None:
+            a = q.next
+            q = q.next.next
+        start2 = a.next
+        a.next = None
+        return start2
 
 
 
