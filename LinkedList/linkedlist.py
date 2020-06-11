@@ -1,6 +1,7 @@
 class Node:
 
     def __init__(self, value):
+
         self.data = value
         self.next = None
 
@@ -11,6 +12,7 @@ class SingleLinkedList:
         self.head = None
 
     def display_list(self):
+
         if self.head is None:
             print("List is empty")
             return
@@ -23,6 +25,7 @@ class SingleLinkedList:
             print()
 
     def count_node(self):
+
         a = self.head
         n=0
         while a is not None:
@@ -32,6 +35,7 @@ class SingleLinkedList:
         return n
 
     def search(self, x):
+
         position = 1
         a = self.head
         while a is not None:
@@ -45,24 +49,25 @@ class SingleLinkedList:
             return False
 
     def insert_in_beginning(self, data):
+
         if not isinstance(data, Node):
             data = Node(data)
         data.next = self.head
         self.head = data
 
     def insert_at_end(self, data):
-        temp = Node(data)
 
+        temp = Node(data)
         if self.head is None:
             self.head = temp
             return
-
-        a= self.head
+        a = self.head
         while a.next is not None:
-            a=a.next
+            a = a.next
         a.next = temp
 
     def create_list(self):
+
         n = int(input("Enter the number of nodes: "))
         if n == 0:
             return
@@ -71,25 +76,112 @@ class SingleLinkedList:
             self.insert_at_end(data)
 
     def insert_after(self, data, x):
-        pass
+
+        a = self.head
+        while a is not None:
+            if a.data == x:
+                break
+            a = a.next
+        if a is None:
+            print(x, "not present in the list")
+        else:
+            temp = Node(data)
+            temp.next = a.next
+            a.next = temp
 
     def insert_before(self, data, x):
-        pass
+        # if list is empty
+        if self.head is None:
+            print("List is empty")
+            return
+        # x is in first node, new node is to be inserted before first node
+        if x == self.head.data:
+            temp = Node(data)
+            temp.next = self.head
+            self.head = temp
+            return
+        # Find reference to predecessor of node containing x
+        a = self.head
+        while a.next is not None:
+            if a.next.data == x:
+                break
+            a = a.next
+        if a.next is None:
+            print(x, " not present in the list")
+        else:
+            temp = Node(data)
+            temp.next = a.next
+            a.next = temp
 
     def insert_at_position(self, data, k):
-        pass
+
+        if k == 1:
+            temp = Node(data)
+            temp.next = self.head
+            self.head = temp
+            return
+
+        a = self.head
+        i = 1
+        while i < k-1 and a is not None:   # find a reference (link) to k-1 node
+            a = a.next
+            i += 1
+
+        if a is None:
+            print("You can insert only up to position ", i)
+        else:
+            temp = Node(data)
+            temp.next = a.next
+            a.next = temp
 
     def delete_node(self, x):
-        pass
+
+        if self.head is None:
+            print("List is empty")
+        # deletion of first node
+        if self.head.data == x:
+            self.head = self.head.next.next
+
+        # deletion in between or at the end
+        a = self.head
+        while a.next is not None:
+            if a.next.data == x:
+                break
+            a = a.next
+
+        if a.next is None:
+            print("Element ", x, " not in the list")
+        else:
+            a.next = a.next.next
 
     def delete_fisrt_node(self):
-        pass
+
+        if self.head is None:
+            return
+        self.head = self.head.next
 
     def delete_last_node(self):
-        pass
+
+        if self.head is None:
+            return
+
+        if self.head.next is None:
+            self.head = None
+            return
+        a = self.head
+        while a.next.next is not None:
+            a = a.next
+        a.next = None
 
     def reverse_list(self):
-        pass
+        prev = None
+        a = self.head
+        while a is not None:
+            next_node = a.next
+            a.next = prev
+            prev = a
+            a = next_node
+        self.head = prev
 
     def bubble_sort_exdata(self):
         pass
