@@ -1,10 +1,14 @@
 from LinkedList.linkedlist import SingleLinkedList
+from LinkedList.doublelinkedlist import DoubleLinkedList
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
 
+obj_list2 = DoubleLinkedList()
+obj_list2.create_list()
 
-def linked_list_practice():
+
+def single_linked_list_practice():
 	while True:
 		print("1. Display list")
 		print("2. Count the number of nodes")
@@ -85,6 +89,57 @@ def linked_list_practice():
 		print()
 
 
-linked_list_practice()
+def double_linked_list():
+	while True:
+		print("1. Display list")
+		print("2. Insert in empty list")
+		print("3. Insert a node in the beginning of the list")
+		print("4. Insert a node at the end of the list")
+		print("5. Insert a node after a specified node")
+		print("6. Insert a node before a specified node")
+		print("7. Delete first node")
+		print("8. Delete last node")
+		print("9. Delete any node")
+		print("10. Reverse the list")
+		print("11. Quit")
 
+		option = int(input("Enter your choice: "))
+
+		if option == 1:
+			obj_list2.display_list()
+		elif option ==2:
+			data = int(input("Enter element to be inserted: "))
+			obj_list2.insert_in_empty_list(data)
+		elif option == 3:
+			data = int(input("Enter element to be inserted: "))
+			obj_list2.insert_in_begining(data)
+		elif option == 4:
+			data = int(input("Enter element to add: "))
+			obj_list2.insert_at_end(data)
+		elif option == 5:
+			data = int(input("Enter element to add: "))
+			x = int(input("Enter position: "))
+			obj_list2.insert_after(data, x)
+		elif option == 6:
+			data = int(input("Enter element to add: "))
+			x = int(input("Enter position: "))
+			obj_list2.insert_before(data, x)
+		elif option == 7:
+			obj_list2.delete_first_node()
+		elif option == 8:
+			obj_list2.delete_last_node()
+		elif option == 9:
+			x = int(input("Choose element to delete: "))
+			obj_list2.delete_node(x)
+		elif option == 10:
+			obj_list2.reverse_list()
+		elif option == 11:
+			break
+		else:
+			print("Wrong option")
+		print()
+
+
+# single_linked_list_practice()
+double_linked_list()
 
