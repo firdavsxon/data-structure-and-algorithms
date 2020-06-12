@@ -213,19 +213,78 @@ class SingleLinkedList:
             end = a
 
     def has_cycle(self):
-        pass
+        if self.find_cycle() is None:
+            return False
+        else:
+            return True
 
     def find_cycle(self):
-        pass
+        if self.head is None or self.head.next is None:
+            return None
+
+        slowR = self.head
+        fastR = self.head
+
+        while fastR is not None and slowR is not None:
+            slowR = slowR.next
+            fastR  = fastR.next.next
+            if slowR == fastR:
+                return slowR
+        return None
 
     def remove_cycle(self):
-        pass
+        c = self.find_cycle()
+        if c is None:
+            return
+        print ("Node at which the cycle was detected is  ", c.data)
+
+        p = c
+        q = c
+        len_cycle = 0
+
+        while True:
+            len_cycle +=1
+            q = q.next
+            if p==q:
+                break
+        print("Length of the cycle is: ", len_cycle)
+
+        len_rem_list = 0
+        p = self.head
+        while p != q:
+            len_rem_list +=1
+            p = p.next
+            q = q.next
+        print("Number of nodes not included in the cycle are: ", len_rem_list)
+        length_list = len_cycle + len_rem_list
+        print("Length of the list is: ", length_list)
+
+        p = self.head
+        for i in range(length_list-1):
+            p = p.next
+        p.next = None
 
     def insert_cycle(self, x):
-        pass
+        if self.head is None:
+            return None
+        p = self.head
+        px = None
+        prev = None
+
+        while p is not None:
+            if p.data == x:
+                px = p
+            prev = p
+            p=p.next
+        if px is not None:
+            prev.next = px
+        else:
+            print(x, " not present in the list")
 
     def merge2(self, list2):
-        pass
+        merge_list = SingleLinkedList()
+        merge_list.head = self._merge2(self.head, list2.head)
+        return merge_list
 
 
     def _merge2(self, a1, a2):

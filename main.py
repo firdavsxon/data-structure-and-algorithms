@@ -85,6 +85,6 @@ def linked_list_practice():
 		print()
 
 
-print(linked_list_practice())
+linked_list_practice()
 
 
