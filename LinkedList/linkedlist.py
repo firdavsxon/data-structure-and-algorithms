@@ -225,60 +225,59 @@ class SingleLinkedList:
         pass
 
     def merge2(self, list2):
-        merge_list = SingleLinkedList()
-        merge_list.head = self._merge2(self.head, list2.head)
-        return merge_list
+        pass
 
-    def _merge2(self, p1, p2):
-        if p1.data <= p2.data:
-            startM = p1
-            p1 = p1.next
+
+    def _merge2(self, a1, a2):
+        if a1.data <= a2.data:
+            headM = a1
+            a1 = a1.next
         else:
-            startM = p2
-            p2 = p2.next
-        pM = startM
+            headM = a2
+            a2 = a2.next
+        aM = headM
 
-        while p1 is not None and p2 is not None:
-            if p1.data <= p2.data:
-                pM.next = p1
-                pM = pM.next
-                p1 = p1.next
+        while a1 is not None and a2 is not None:
+            if a1.data <= a2.data:
+                aM.next = a1
+                aM = aM.next
+                a1 = a1.next
             else:
-                pM.next = p2
-                pM = pM.next
-                p2 = p2.next
-
-        if p1 is None:
-            pM.next = p2
+                aM.next = a2
+                aM = aM.next
+                a2 = a2.next
+        if a1 is None:
+            aM.next = a2
         else:
-            pM.next = p2
+            aM.next = a1
 
-        return startM
+        return headM
 
     def merge_sort(self):
+        # we call recursive function for sorting
         self.head = self._merge_sort_rec(self.head)
 
-    def _merge_sort_rec(self, listStart):
+    def _merge_sort_rec(self, list_head):  # recursive function
         # if list empty or has one element
-        if listStart is None or listStart.next is None:
-            return listStart
+        if list_head is None or list_head.next is None:
+            return list_head
 
         # if more than one element
-        start1 = listStart
-        start2 = self._divide_list(listStart)
-        start1 = self._merge_sort_rec(start1)
-        start2 = self._merge_sort_rec(start2)
-        startM = self._merge2(start1, start2)
-        return startM
+        head1 = list_head
+        head2 = self._divide_list(list_head)
+        head1 = self._merge_sort_rec(head1)
+        head2 = self._merge_sort_rec(head2)
+        headM = self._merge2(head1, head2)
+        return headM
 
     def _divide_list(self, a):
         q = a.next.next
         while q is not None and q.next is not None:
-            a = q.next
+            a = a.next
             q = q.next.next
-        start2 = a.next
+        head2 = a.next
         a.next = None
-        return start2
+        return head2
 
 
 
