@@ -11,14 +11,11 @@ Code part of Data structures and algorithms with Python
     
 #### - [Stacks and Queues](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Stack_and_Queues "Stacks and Queues with Pyhton")
 
-* [Array stack](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stack_array.py "Stack implementation with arrays")
+* [Stack with arrays](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stack_array.py "Stack implementation with arrays")
 
-* []()
+* [Stack with fixed size arrays](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stack_array_with_size.py)
 
-* []()
+* [Stack with linked list](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stacklinked.py)
 
-* []()
-
-* []()
 
         
