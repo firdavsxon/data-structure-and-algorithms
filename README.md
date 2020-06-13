@@ -17,5 +17,7 @@ Code part of Data structures and algorithms with Python
 
 * [Stack with linked list](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stacklinked.py)
 
+* [Queue with array](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/queue_array.py)
+
 
         
