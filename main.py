@@ -3,6 +3,7 @@ from LinkedList.doublelinkedlist import DoubleLinkedList
 from Stack_and_Queues.stack_array import Stack
 from Stack_and_Queues.stack_array_with_size import Stack1
 from Stack_and_Queues.stacklinked import StackLinked
+from Stack_and_Queues.queue_array import QueueArray
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
@@ -13,6 +14,8 @@ obj_list2.create_list()
 st_array = Stack()
 st_array_with_size = Stack1()
 st_linkedlist = StackLinked()
+
+q_array = QueueArray()
 
 
 def single_linked_list_practice():
@@ -234,10 +237,40 @@ def stack_linkedlist():
 			print("Wrong choice")
 		print()
 
+def queue_array_practice():
+	while True:
+		print("1. Enqueue")
+		print("2. Dequeue")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element: "))
+			q_array.enqueue(x)
+		elif choice ==2:
+			q_array.dequeue()
+		elif choice == 3:
+			q_array.peek()
+		elif choice == 4:
+			q_array.size()
+		elif choice == 5:
+			q_array.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
+
 
 # single_linked_list_practice()
 # double_linked_list()
 # stack_array_practice()
 # stack_array_wsize_practice()
-stack_linkedlist()
+# stack_linkedlist()
+queue_array_practice()
 
