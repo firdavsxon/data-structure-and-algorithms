@@ -1,11 +1,14 @@
 from LinkedList.linkedlist import SingleLinkedList
 from LinkedList.doublelinkedlist import DoubleLinkedList
+from Stack_and_Queues.stack_array import Stack
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
 
 obj_list2 = DoubleLinkedList()
 obj_list2.create_list()
+
+st_array = Stack()
 
 
 def single_linked_list_practice():
@@ -140,6 +143,38 @@ def double_linked_list():
 		print()
 
 
+def stack_array_practice():
+	while True:
+		print("1. Push")
+		print("2. Pop")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element to be pushed: "))
+			st_array.push(x)
+		elif choice == 2:
+			x = st_array.pop()
+			print("Popped element is ", x)
+		elif choice == 3:
+			st_array.peek()
+		elif choice == 4:
+			st_array.size()
+		elif choice == 5:
+			st_array.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
+
+
 # single_linked_list_practice()
-double_linked_list()
+# double_linked_list()
+stack_array_practice()
 
