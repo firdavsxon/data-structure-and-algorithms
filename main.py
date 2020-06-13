@@ -2,6 +2,7 @@ from LinkedList.linkedlist import SingleLinkedList
 from LinkedList.doublelinkedlist import DoubleLinkedList
 from Stack_and_Queues.stack_array import Stack
 from Stack_and_Queues.stack_array_with_size import Stack1
+from Stack_and_Queues.stacklinked import StackLinked
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
@@ -11,6 +12,7 @@ obj_list2.create_list()
 
 st_array = Stack()
 st_array_with_size = Stack1()
+st_linkedlist = StackLinked()
 
 
 def single_linked_list_practice():
@@ -203,9 +205,39 @@ def stack_array_wsize_practice():
 			print("Wrong choice")
 		print()
 
+def stack_linkedlist():
+	while True:
+		print("1. Push")
+		print("2. Pop")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element to be pushed: "))
+			st_linkedlist.push(x)
+		elif choice == 2:
+			x = st_linkedlist.pop()
+			print("Popped element is ", x)
+		elif choice == 3:
+			print("Element on the top is: ", st_linkedlist.peek())
+		elif choice == 4:
+			print("Size of stack is: ", st_linkedlist.size())
+		elif choice == 5:
+			st_linkedlist.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
 
 # single_linked_list_practice()
 # double_linked_list()
 # stack_array_practice()
-stack_array_wsize_practice()
+# stack_array_wsize_practice()
+stack_linkedlist()
 
