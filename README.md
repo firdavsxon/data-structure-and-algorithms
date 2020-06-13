@@ -10,11 +10,4 @@ Code part of Data structures and algorithms with Python
 
 [Array stack](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stack_array.py "Stack implementation with arrays")
 
-Colons can be used to align columns.
-
-| Tables        |      Are      | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | [Array stack](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/stack_array.py "Stack implementation with arrays") |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
         
