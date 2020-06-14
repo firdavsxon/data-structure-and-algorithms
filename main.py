@@ -4,6 +4,11 @@ from Stack_and_Queues.stack_array import Stack
 from Stack_and_Queues.stack_array_with_size import Stack1
 from Stack_and_Queues.stacklinked import StackLinked
 from Stack_and_Queues.queue_array import QueueArray
+from Stack_and_Queues.queue_fixed_size_array import QueueArrayFixed
+from Stack_and_Queues.queue_linked import QueueLinked
+from Stack_and_Queues.queue_circular_linked import QueueCircularLinked
+from Stack_and_Queues.priority_queue import PriorityQueue
+
 
 obj_list = SingleLinkedList()
 obj_list.create_list()
@@ -16,6 +21,10 @@ st_array_with_size = Stack1()
 st_linkedlist = StackLinked()
 
 q_array = QueueArray()
+qarray_fidexsize = QueueArrayFixed()
+qu_linked = QueueLinked()
+qu_cicularlinked = QueueCircularLinked()
+qu_priorty = PriorityQueue()
 
 
 def single_linked_list_practice():
@@ -179,6 +188,7 @@ def stack_array_practice():
 			print("Wrong choice")
 		print()
 
+
 def stack_array_wsize_practice():
 	while True:
 		print("1. Push")
@@ -207,6 +217,7 @@ def stack_array_wsize_practice():
 		else:
 			print("Wrong choice")
 		print()
+
 
 def stack_linkedlist():
 	while True:
@@ -237,6 +248,7 @@ def stack_linkedlist():
 			print("Wrong choice")
 		print()
 
+
 def queue_array_practice():
 	while True:
 		print("1. Enqueue")
@@ -266,11 +278,132 @@ def queue_array_practice():
 		print()
 
 
+def queue_array_wsize_practice():
+	while True:
+		print("1. Enqueue")
+		print("2. Dequeue")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element: "))
+			qarray_fidexsize.enqueue(x)
+		elif choice == 2:
+			x = qarray_fidexsize.dequeue()
+			print("Element deleted from the queue is :", x)
+		elif choice == 3:
+			print("Element at the front is "), qarray_fidexsize.peek()
+		elif choice == 4:
+			print("Size of queue ", qarray_fidexsize.size())
+		elif choice == 5:
+			qarray_fidexsize.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
+
+def queue_linked_practice():
+	while True:
+		print("1. Enqueue")
+		print("2. Dequeue")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element: "))
+			qu_linked.enqueue(x)
+		elif choice == 2:
+			x = qu_linked.dequeue()
+			print("Element deleted from the queue is :", x)
+		elif choice == 3:
+			print("Element at the front is "), qu_linked.peek()
+		elif choice == 4:
+			print("Size of queue ", qu_linked.size())
+		elif choice == 5:
+			qu_linked.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
+
+def queue_circular_practice():
+	while True:
+		print("1. Enqueue")
+		print("2. Dequeue")
+		print("3. Peek")
+		print("4. Size")
+		print("5. Display")
+		print("6. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element: "))
+			qu_cicularlinked.enqueue(x)
+		elif choice == 2:
+			x = qu_cicularlinked.dequeue()
+			print("Element deleted from the queue is :", x)
+		elif choice == 3:
+			print("Element at the front is "), qu_cicularlinked.peek()
+		elif choice == 4:
+			print("Size of queue ", qu_cicularlinked.size())
+		elif choice == 5:
+			qu_cicularlinked.display()
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
+
+def priority_queue_practice():
+	while True:
+		print("1. Enqueue")
+		print("2. Dequeue")
+		print("3. Display all queue element")
+		print("4. Display size of the queue")
+		print("5. Quit")
+
+		choice = int(input("Enter your choice: "))
+
+		if choice == 1:
+			x = int(input("Enter the element: "))
+			pr = int(input("Enter the priority: "))
+			qu_priorty.enqueue(x, pr)
+		elif choice == 2:
+			x = qu_priorty.dequeue()
+			print("Element deleted from the queue is :", x)
+		elif choice == 3:
+			print("Display all the queue elements", qu_priorty.display())
+		elif choice == 4:
+			print("Size of queue ", qu_priorty.size())
+		elif choice == 6:
+			break
+		else:
+			print("Wrong choice")
+		print()
+
 
 # single_linked_list_practice()
 # double_linked_list()
 # stack_array_practice()
 # stack_array_wsize_practice()
 # stack_linkedlist()
-queue_array_practice()
+# queue_array_practice()
+# queue_array_wsize_practice()
+# queue_linked_practice()
+# queue_circular_practice()
+priority_queue_practice()
 
