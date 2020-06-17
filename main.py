@@ -8,6 +8,7 @@ from Stack_and_Queues.queue_fixed_size_array import QueueArrayFixed
 from Stack_and_Queues.queue_linked import QueueLinked
 from Stack_and_Queues.queue_circular_linked import QueueCircularLinked
 from Stack_and_Queues.priority_queue import PriorityQueue
+from Trees.binary_search_tree import Tree
 
 
 obj_list = SingleLinkedList()
@@ -26,6 +27,7 @@ qu_linked = QueueLinked()
 qu_cicularlinked = QueueCircularLinked()
 qu_priorty = PriorityQueue()
 
+new_tree = Tree()
 
 def single_linked_list_practice():
 	while True:
