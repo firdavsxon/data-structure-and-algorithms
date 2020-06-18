@@ -19,5 +19,27 @@ Code part of Data structures and algorithms with Python
 
 * [Queue with array](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/queue_array.py)
 
+* [Queue wth fixd size array](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/queue_fixed_size_array.py)
+
+* [Queue linked list](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/queue_linked.py)
+
+* [Queue circular li ked list](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/queue_circular_linked.py)
+
+* [Priority queue](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Stack_and_Queues/priority_queue.py)
+
+#### - [Binary Tree](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Stack_and_Queues "Stacks and Queues with Pyhton")
+
+* [Binary search tree](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Trees/binary_search_tree.py)
+
+
+
+
+
+
+
+
+
+
+
 
         
