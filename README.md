@@ -32,6 +32,13 @@ Code part of Data structures and algorithms with Python
 * [Binary search tree](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Trees/binary_search_tree.py)
 
 
+#### - [Heap](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Heap "Heaps")
+
+* [Heap](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Heap/heap.py " Heap data structure")
+
+
+
+
 
 
 
