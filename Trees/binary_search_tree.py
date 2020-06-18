@@ -40,8 +40,6 @@ class Tree:
 
 
 	def lookup(self, value):
-		if self.root is None:
-			return False
 		current_node = self.root
 		while current_node:
 			if current_node.value > value:
@@ -50,25 +48,7 @@ class Tree:
 				current_node = current_node.right
 			elif current_node.value == value:
 				return current_node
-		return False
-		# if self.root is not None:
-		# 	current = self.root
-		# 	while current:
-		# 		if current.value > value:
-		# 			if current.left is None:
-		# 				return False
-		# 			if current.value == value:
-		# 				return current
-		# 			current = current.left
-		# 		elif current.value == value:
-		# 			return current
-		# 		else:
-		# 			if current.right is None:
-		# 				return False
-		# 			if current.value == value:
-		# 				return current
-		# 			current = current.right
-		# return False
+		return None
 
 	def remove(self, value):
 		if self.root is None:
