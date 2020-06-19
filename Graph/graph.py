@@ -42,7 +42,7 @@ class Graph(object):
 
 	def add_edges(self, edge):
 		"""assumes that edge is type of set, tuple or list;
-		netween two vetticies can be multiple edges!"""
+		between two vertices can be multiple edges!"""
 		edge = set(edge)
 		(vertex1, vertex2) =tuple(edge)
 		if vertex1 in self._graph_dict:
