@@ -40,6 +40,17 @@ Code part of Data structures and algorithms with Python
 
 * [Graph](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Graph/graph.py)
 
+* [Graph1](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Graph/graph1.py)
+
+
+#### - [Trie](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Trie)
+
+* [Trie](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Trie/trie.py)
+
+
+
+
+
 
 
 
