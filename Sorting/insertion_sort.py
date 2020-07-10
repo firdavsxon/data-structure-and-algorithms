@@ -8,7 +8,7 @@ def insertionSort(lst):
 	for i in range(1, length):
 		currentValue = lst[i]
 		position = i
-		while position > 0 and lst[position-1]> currentValue:
+		while position > 0 and lst[position-1] > currentValue:
 			lst[position] = lst[position-1]
 			position = position - 1
 		lst[position] = currentValue
