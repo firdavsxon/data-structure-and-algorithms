@@ -14,5 +14,6 @@ def insertionSort(lst):
 		lst[position] = currentValue
 	return lst
 
+
 print(f'Pre-order numbers: {numbers}')
 print(f'Post-order numbers: {insertionSort(numbers)}')
