@@ -16,12 +16,12 @@ def dfs(graph, current_vertex, target_value, visited=None):
 
 
 the_most_dangerous_graph = {
-	'lava': set(['sharks', 'piranhas']),
-	'sharks': set(['lava', 'bees', 'lasers']),
-	'piranhas': set(['lava', 'crocodiles']),
-	'bees': set(['sharks']),
-	'lasers': set(['sharks', 'crocodiles']),
-	'crocodiles': set(['piranhas', 'lasers'])
+	'lava': {'sharks', 'piranhas'},
+	'sharks': {'lava', 'bees', 'lasers'},
+	'piranhas': {'lava', 'crocodiles'},
+	'bees': {'sharks'},
+	'lasers': {'sharks', 'crocodiles'},
+	'crocodiles': {'piranhas', 'lasers'}
 }
 
 # Call dfs() below and print the result:
