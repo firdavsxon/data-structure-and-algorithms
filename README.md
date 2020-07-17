@@ -71,6 +71,12 @@ Code part of Data structures and algorithms with Python
 
 * [Binary search](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/binary_search.py)
 
+* [Breadth first search (BFS)](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/breadth_first_search.py)
+
+* [Depth first search (DFS)](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/depth_first_search.py)
+
+* [Dijkstra algorithm](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/dijkstra_algorithm.py)
+
 
 
 
