@@ -47,6 +47,30 @@ Code part of Data structures and algorithms with Python
 
 * [Trie](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Trie/trie.py)
 
+#### - [Recursion](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Recursion)
+
+* [Recursion](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Recursion/recursion.py)
+
+#### - [Sorting algortihm](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Sorting)
+
+* [Bubble sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/bubble_sort.py)
+
+* [Selecting sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/selecting_sort.py)
+
+* [Insertion sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/insertion_sort.py)
+
+* [Merge sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/merge_sort.py)
+
+* [Quick sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/quick_sort.py)
+
+* [Radix sort](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Sorting/radix_sort.py)
+
+#### - [Searching algorithm](https://github.com/firdavsxon/data-structure-and-algorithms/tree/master/Sorting)
+
+* [Linear search](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/linear_search.py)
+
+* [Binary search](https://github.com/firdavsxon/data-structure-and-algorithms/blob/master/Searching/binary_search.py)
+
 
 
 
