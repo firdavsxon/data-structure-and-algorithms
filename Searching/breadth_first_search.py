@@ -5,6 +5,7 @@ the_most_dangerous_graph = {
 	'bees': {'sharks'},
 	'lasers': {'sharks', 'crocodiles'},
 	'crocodiles': {'piranhas', 'lasers'}
+
 }
 
 
@@ -26,5 +27,7 @@ def bfs(graph, start_vertex, target_value):
 					bfs_queue.append([neighbor, path + [neighbor]])
 
 
-print(bfs(the_most_dangerous_graph, "crocodiles", "bees"))
+print(bfs(the_most_dangerous_graph, "bees", "lasers"))
+
+
 
